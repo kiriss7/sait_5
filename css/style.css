@@ -1,5 +1,883 @@
-*{
+/* щрифт и база */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* хедер */
+.header {
+    padding: 0 20px;
+}
+
+/* навигация */
+.header_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.header_menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+
+}
+
+.header_menu_item {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    color: #263238;
+}
+
+.header_navbar_button {
+    border: 2px solid #263238;
+    border-radius: 5px;
+    width: 220px;
+    height: 70px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    background: white;
+
+}
+
+.img_burger {
+    display: none;
+}
+
+/* тект и фото хедера */
+.header_text_foto {
+    display: grid;
+    justify-content: space-between;
+    margin-top: 80px;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.header_foto {
+    order: 1;
+}
+
+.header_text_title_and_img {
+    display: flex;
+}
+
+.header_text_img {
+
+    max-width: 86px;
+    padding-top: 55px;
+}
+
+.header_text_title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 125%;
+    color: #000;
+    max-width: 386px;
+}
+
+.header_text_text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #8f95a5;
+    max-width: 536px;
+    padding-top: 40px;
+}
+
+.header_text_foto_button {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 36px;
+    color: #fff;
+    border-radius: 15px;
+    width: 438px;
+    height: 118px;
+    background: #263238;
+    margin-top: 61px;
+}
+
+
+
+.header_foto_img {
+    margin-top: -54px;
+    width: 100%;
+    max-width: 661px;
+}
+
+/* вторая секция */
+.skills {
+    margin-top: 125px;
+    padding: 0 20px;
+}
+
+.skils_title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 167%;
+    color: #000;
+    text-align: center;
+}
+
+.skils_papa_grid {
+    padding-top: 100px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "one two three"
+        "one four four";
+    justify-content: space-evenly;
+    align-items: stretch;
+    max-width: 100%;
+}
+
+.skils_item_grid {
+    background: #f5f5f5;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.img_item_grid_icons {
+    max-width: 100%;
+}
+
+.skills_item_text_botton {
+    padding: 20px;
+
+}
+
+.title_item_grid {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 267%;
+    color: #263238;
+}
+
+
+.text_item_grid {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #8f95a5;
+    margin-bottom: 10px;
+}
+
+.button_item_grid {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    width: 218px;
+    height: 60px;
+    border-radius: 5px;
+    width: 218px;
+    height: 60px;
+    background: #263238;
+}
+
+/* первый элемент */
+.Speaking {
+    grid-area: one;
+
+}
+
+
+/* второй элемент */
+.Writen {
+    grid-area: two;
+
+}
+
+
+
+
+/* третий элемент */
+.Reading {
+    grid-area: three;
+
+}
+
+
+/* четвертый элемент */
+.Listing {
+    grid-area: four;
+    flex-direction: row;
+
+
+}
+
+.Listing .img_item_grid {
+    order: 1;
+
+}
+
+
+
+
+.skils_item_grid.Listing {
+    align-items: center;
+}
+
+
+/* секция о нас */
+.about {
+    margin-top: 250px;
+    padding: 0 20px;
+}
+
+.about_papa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.about_img_div {
+    order: 1;
+    margin-top: -180px;
+}
+
+.about_info {
+    height: 480px;
+    max-width: 635px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about_info_title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 167%;
+    color: #000;
+
+}
+
+.about_info_text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #8f95a5;
+    margin-top: -8px;
+    max-width: 635px;
+    padding-top: 50px;
+
+}
+
+.about_info_papa_items {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+
+
+}
+
+
+
+
+
+.about_info_item_number {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 167%;
+    color: #2a3246;
+}
+
+.about_info_item_text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #8f95a5;
+}
+
+.about_img {
+    width: 100%;
+}
+
+/* секция цены */
+.pricing {
+    margin-top: 185px;
+    padding: 0 20px;
+
+}
+
+.pricing_title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 167%;
+    color: #000;
+    text-align: center;
+
+}
+
+.papa_pricing {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 80px;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.pricing_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 560px;
+
+}
+
+
+
+.pricing_item_title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 160%;
+    color: #263238;
+}
+
+.pricing_item_text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #8f95a5;
+    max-width: 420px;
+}
+
+.pricing_item_button {
+    max-width: 220px;
+}
+
+
+
+.one .pricing_item_img {
+    max-width: 311px;
+}
+
+.therd .pricing_item_img {
+    max-width: 340px;
+}
+
+.pricing_img_div {
+    height: 340px;
+
+}
+
+/* секция контакты */
+.contacts {
+    margin-top: 270px;
+    padding: 0 20px;
+}
+
+.contacts_papa {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts_img {
+    max-width: 477px;
+    max-height: 429px;
+    width: 100%;
+}
+
+.cotacts_text_papa {
+    max-width: 751px;
+}
+
+.contact_title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 167%;
+    color: #000;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 80px;
+
+}
+
+.contact_text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #8f95a5;
+    padding-top: 40px;
+}
+
+input {
+    border: 1px solid #8f95a5;
+    border-radius: 10px;
+
+    height: 80px;
+    width: 65%;
+    padding-left: 30px;
+}
+
+.contact_form {
+    padding-top: 50px;
+    height: 132px;
+    display: flex;
+    gap: 5px;
+}
+
+.button_contacts {
+    border-radius: 10px;
+    width: 32%;
+    height: 80px;
+    background: #263238;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+
+.footer {
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+.footer_line {
+    background: #c4c4c4;
+    height: 2px;
+
+}
+
+.footer_papa {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.footer_logo_img {
+    width: 106px;
+
+}
+
+.footer_info_papa {
+    display: flex;
+    gap: 30px;
+
+}
+
+
+
+.footer_info_item {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #8f95a5;
+}
+
+.footer_info_papa :nth-child(1) {
+    list-style: none;
+}
+
+/* медиа */
+@media screen and (max-width:992px) {
+
+    /* хедер */
+    .header_navbar_logo {
+        max-width: 89px;
+    }
+
+    .header_menu_item {
+        font-size: 16px;
+    }
+
+    .header_navbar_button {
+        font-size: 18px;
+        border: 2px solid #263238;
+        border-radius: 5px;
+        width: 160px;
+        height: 50px;
+    }
+
+    .header_text_title {
+        font-size: 48px;
+        max-width: 300px;
+    }
+
+
+    .header_text_img {
+        width: 59px;
+    }
+
+    .header_text_text {
+        font-size: 20px;
+    }
+
+    .header_text_foto_button {
+        border-radius: 5px;
+        width: 236px;
+        height: 65px;
+        font-size: 18px;
+
+    }
+
+    .header_foto_img {
+        max-width: 352px;
+    }
+
+    /* cекция 2 */
+    .skils_title {
+        font-size: 48px;
+    }
+
+    .title_item_grid {
+        font-size: 22px;
+    }
+
+    .text_item_grid {
+        font-size: 14px;
+    }
+
+    .button_item_grid {
+        font-size: 18px;
+        width: 196px;
+        height: 57px;
+        font-size: 18px;
+    }
+
+    /* cекция о нас */
+    .about_info_title {
+        font-size: 36px;
+    }
+
+    .about_info_text {
+        font-size: 16px;
+    }
+
+    .about_info_item_number {
+        font-size: 30px;
+    }
+
+    .about_info_item_text {
+        font-size: 16px;
+    }
+
+    /* секция цены */
+    .pricing_title {
+        font-size: 36px;
+    }
+
+    .pricing_item_title {
+        font-size: 22px;
+    }
+
+    .pricing_item_text {
+        font-size: 16px;
+    }
+
+    /* cекция контакты */
+    .contact_title {
+        font-size: 36px;
+    }
+
+    .contact_text {
+        font-size: 16px;
+
+    }
+
+    .button_contacts {
+        font-size: 16px;
+    }
+
+    /* футер */
+    .footer_logo_img {
+        width: 89px;
+    }
+
+    .footer_info_item {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    /* хедер */
+
+    .header_menu,
+    .header_navbar_button {
+        display: none;
+    }
+
+    .img_burger {
+        display: block;
+    }
+
+    .header_text_title {
+        font-size: 36px;
+        max-width: 220px;
+    }
+
+    .header_text_img {
+        width: 51px;
+    }
+
+    .header_text_text {
+        font-size: 16px;
+    }
+
+    .header_text_foto_button {
+        border-radius: 5px;
+        width: 236px;
+        height: 65px;
+        font-size: 18px;
+    }
+
+    .header_foto_img {
+        max-width: 352px;
+    }
+
+    /* cекция 2 */
+    .skils_papa_grid {
+        grid-template-areas:
+            "one two"
+            "three four";
+    }
+
+    .Listing {
+        flex-direction: column;
+    }
+
+    .Listing .img_item_grid {
+        order: 0;
+
+    }
+
+    .skils_item_grid {
+        height: 650px;
+    }
+
+    .skils_title {
+        font-size: 30px;
+    }
+
+    .title_item_grid {
+        font-size: 20px;
+    }
+
+    .text_item_grid {
+        font-size: 13px;
+    }
+
+    .button_item_grid {
+        border-radius: 5px;
+        width: 178px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .Reading .text_item_grid {
+        margin-bottom: 203px;
+    }
+
+    .Listing .text_item_grid {
+        margin-bottom: 184px;
+    }
+
+    .Writen .text_item_grid {
+        margin-bottom: 108px;
+    }
+
+    /* cекция о нас */
+    .about_info_title {
+        font-size: 30px;
+    }
+
+    .about_info_text {
+        font-size: 14px;
+    }
+
+    .about_info_item_number {
+        font-size: 22px;
+    }
+
+    .about_info_item_text {
+        font-size: 13px;
+    }
+
+    /* секция цены */
+    .pricing_title {
+        font-size: 30px;
+    }
+
+    .pricing_item_title {
+        font-size: 20px;
+    }
+
+    .pricing_item_text {
+        font-size: 14px;
+    }
+
+    /* cекция контакты */
+    .contact_title {
+        font-size: 30px;
+        margin-left: 0;
+    }
+
+    .contact_text {
+        font-size: 14px;
+    }
+
+    .button_contacts {
+        font-size: 16px;
+    }
+
+    /* футер */
+    .footer_logo_img {
+        width: 89px;
+    }
+
+    .footer_info_item {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    br {
+        display: none;
+    }
+
+    /* хедер */
+    .header_text_foto {
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .header_foto {
+        order: 0;
+    }
+
+    .header_text_title {
+        max-width: none;
+    }
+
+    .header_text_img {
+        display: none;
+    }
+
+    /* секция о нас */
+    .about {
+        text-align: center;
+    }
+
+    .about_papa {
+        flex-direction: column;
+
+    }
+
+    .about_img_div {
+        order: 0;
+        margin: 0;
+    }
+
+    /* секция цены */
+    .pricing {
+        margin-top: 0px;
+    }
+
+    .papa_pricing {
+        text-align: center;
+        grid-template-columns: 1fr
+    }
+
+    .pricing_item {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+
+    .pricing_item_button {
+        margin: 0 auto;
+
+        /* контакты */
+
+    }
+
+    .contacts_papa {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* футер */
+    .footer_info_item {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    /* секция 2 */
+    .skils_papa_grid {
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four';
+    }
+    .skils_item_grid {
+        height: 800px;
+    }
+    /* о нас */
+    .about_info_papa_items{
+        flex-direction: column;
+        gap: 50px;
+    }
+    /* цены */
+    .pricing{margin-top: 150px;}
+    /* футер */
+.footer_papa{
+    flex-direction: column;
+    text-align: center;
+    
+}
+.footer_info_papa {
+    justify-content: space-evenly;
+    gap: 0;
+    list-style: none;
+}
 }
