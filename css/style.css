@@ -83,6 +83,9 @@ img {
 
 .header_foto {
     order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .header_text_title_and_img {
